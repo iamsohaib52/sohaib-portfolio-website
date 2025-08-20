@@ -16,8 +16,13 @@ export function HeroSection() {
   };
 
   const downloadCV = () => {
-    // In a real implementation, this would link to the actual CV file
-    alert("CV download functionality would be implemented here");
+    // Create a temporary link element and trigger download
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'Muhammad_Sohaib_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

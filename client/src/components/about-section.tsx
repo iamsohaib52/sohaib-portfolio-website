@@ -57,9 +57,14 @@ export function AboutSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            {/* Profile picture placeholder with modern styling */}
-            <div className="w-80 h-80 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
-              MS
+            {/* Profile picture */}
+            <div className="w-80 h-80 mx-auto rounded-full overflow-hidden shadow-2xl">
+              <img 
+                src="/profile1.png" 
+                alt="Muhammad Sohaib - Profile Picture" 
+                className="w-full h-full object-cover"
+                data-testid="profile-picture"
+              />
             </div>
           </motion.div>
 
@@ -89,19 +94,19 @@ export function AboutSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"
+                className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4"
               >
                 {skills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     variants={itemVariants}
                     whileHover={{ scale: 1.05, y: -2 }}
-                    className="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300"
+                    className="skill-badge bg-white dark:bg-slate-700 p-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center min-h-[100px]"
                     data-testid={`skill-badge-${skill.name.toLowerCase().replace(/[^a-z0-9]/g, '-')}`}
                   >
-                    <div className="text-2xl mb-2 block">{skill.icon}</div>
-                    <Badge variant="secondary" className={skill.color}>
-                      {skill.name}
+                    <div className="text-xl mb-2 block">{skill.icon}</div>
+                    <Badge variant="secondary" className={`${skill.color} text-xs text-center px-2 py-1 max-w-full`}>
+                      <span className="truncate">{skill.name}</span>
                     </Badge>
                   </motion.div>
                 ))}
