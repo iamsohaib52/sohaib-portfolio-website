@@ -104,7 +104,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Button
               onClick={downloadCV}
@@ -126,28 +126,28 @@ export function HeroSection() {
               Contact Me
             </Button>
           </motion.div>
-        </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
+          {/* Scroll Indicator */}
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 cursor-pointer"
-            onClick={() => {
-              const aboutSection = document.getElementById("about");
-              aboutSection?.scrollIntoView({ behavior: "smooth" });
-            }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 1.2 }}
+            className="flex flex-col items-center"
           >
-            <div className="flex flex-col items-center">
-              <span className="text-sm mb-2 font-medium">Scroll to explore</span>
-              <ArrowDown className="h-6 w-6" />
-            </div>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 cursor-pointer"
+              onClick={() => {
+                const aboutSection = document.getElementById("about");
+                aboutSection?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              <div className="flex flex-col items-center">
+                <span className="text-sm mb-2 font-medium">Scroll to explore</span>
+                <ArrowDown className="h-6 w-6" />
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

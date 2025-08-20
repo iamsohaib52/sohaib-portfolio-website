@@ -39,7 +39,7 @@ export function ExperienceSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Experience & Education
+            Education & Experience
           </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </motion.div>

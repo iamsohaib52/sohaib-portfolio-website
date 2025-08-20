@@ -90,27 +90,27 @@ export function ContactSection() {
   const contactLinks = [
     {
       name: "Email",
-      href: "mailto:muhammad.sohaib@example.com",
+      href: "mailto:sohaib.cs@outlook.com",
       icon: Mail,
-      description: "muhammad.sohaib@example.com",
+      description: "sohaib.cs@outlook.com",
       color: "bg-blue-600",
-      hoverColor: "hover:bg-blue-50 dark:hover:bg-blue-900/30",
+      hoverColor: "hover:bg-blue-100 dark:hover:bg-blue-900/30",
     },
     {
       name: "GitHub",
-      href: "https://github.com/muhammad-sohaib",
+      href: "https://github.com/iamsohaib52",
       icon: Github,
-      description: "@muhammad-sohaib",
+      description: "@iamsohaib52",
       color: "bg-gray-800 dark:bg-gray-600",
-      hoverColor: "hover:bg-gray-800 dark:hover:bg-gray-700",
+      hoverColor: "hover:bg-gray-100 dark:hover:bg-gray-700",
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/muhammad-sohaib",
+      href: "https://www.linkedin.com/in/muhammad-sohaib-5b6a30248",
       icon: Linkedin,
       description: "Muhammad Sohaib",
       color: "bg-blue-700",
-      hoverColor: "hover:bg-blue-700 dark:hover:bg-blue-800",
+      hoverColor: "hover:bg-blue-100 dark:hover:bg-blue-800",
     },
   ];
 

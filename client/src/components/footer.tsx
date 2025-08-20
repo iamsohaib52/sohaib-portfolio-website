@@ -5,17 +5,17 @@ export function Footer() {
   const socialLinks = [
     {
       name: "Email",
-      href: "mailto:muhammad.sohaib@example.com",
+      href: "mailto:sohaib.cs@outlook.com",
       icon: Mail,
     },
     {
       name: "GitHub",
-      href: "https://github.com/muhammad-sohaib",
+      href: "https://github.com/iamsohaib52",
       icon: Github,
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/muhammad-sohaib",
+      href: "https://www.linkedin.com/in/muhammad-sohaib-5b6a30248",
       icon: Linkedin,
     },
   ];
