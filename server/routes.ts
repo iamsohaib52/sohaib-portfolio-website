@@ -1,12 +1,46 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { z } from "zod";
+import sgMail from "@sendgrid/mail";
+
+// Initialize SendGrid
+if (process.env.SENDGRID_API_KEY) {
+  sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+}
 
 const contactSchema = z.object({
   name: z.string().min(1, "Name is required").max(100, "Name is too long"),
   email: z.string().email("Invalid email address"),
   message: z.string().min(10, "Message must be at least 10 characters").max(1000, "Message is too long"),
 });
+
+async function sendEmail(data: { name: string; email: string; message: string }) {
+  if (!process.env.SENDGRID_API_KEY) {
+    console.log("SendGrid API key not found. Contact form submission:", data);
+    return false;
+  }
+
+  try {
+    const msg = {
+      to: 'sohaib.cs@outlook.com',
+      from: 'sohaib.cs@outlook.com', // Use your verified sender email
+      subject: `Portfolio Contact: ${data.name}`,
+      html: `
+        <h3>New Contact Form Submission</h3>
+        <p><strong>Name:</strong> ${data.name}</p>
+        <p><strong>Email:</strong> ${data.email}</p>
+        <p><strong>Message:</strong> ${data.message}</p>
+        <p><strong>Timestamp:</strong> ${new Date().toISOString()}</p>
+      `,
+    };
+
+    await sgMail.send(msg);
+    return true;
+  } catch (error) {
+    console.error('SendGrid email error:', error);
+    return false;
+  }
+}
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Contact form endpoint
@@ -15,21 +49,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Validate request body
       const validatedData = contactSchema.parse(req.body);
       
-      // In a real implementation, this would:
-      // 1. Send an email using a service like Nodemailer, SendGrid, etc.
-      // 2. Store the contact form submission in a database
-      // 3. Send notifications to the site owner
+      // Send email using SendGrid
+      const emailSent = await sendEmail(validatedData);
       
-      // For now, we'll just log the contact form submission
-      console.log("Contact form submission:", {
-        name: validatedData.name,
-        email: validatedData.email,
-        message: validatedData.message,
-        timestamp: new Date().toISOString(),
-      });
-      
-      // Simulate email sending delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      if (!emailSent && process.env.SENDGRID_API_KEY) {
+        throw new Error("Failed to send email");
+      }
       
       res.status(200).json({
         success: true,
