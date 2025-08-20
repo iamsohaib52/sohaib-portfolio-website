@@ -1,0 +1,578 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Sohaib - Software Engineer | Portfolio</title>
+    <meta name="description" content="Muhammad Sohaib - Final Year BS Computer Science Student, Class Topper & Aspiring Software Engineer. Specializing in AI, Blockchain, and Distributed Systems.">
+    <meta name="keywords" content="Muhammad Sohaib, Software Engineer, Computer Science, Blockchain, AI, Portfolio">
+    <meta property="og:title" content="Muhammad Sohaib - Software Engineer Portfolio">
+    <meta property="og:description" content="Final Year BS Computer Science Student specializing in AI, Blockchain, and Distributed Systems">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.6s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s infinite',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        }
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="font-inter bg-white dark:bg-slate-900 text-gray-900 dark:text-white transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-xl font-bold text-blue-600 dark:text-blue-400">
+                    Muhammad Sohaib
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About</a>
+                    <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact</a>
+                </div>
+                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-500/10 rounded-full animate-bounce-slow"></div>
+            <div class="absolute -bottom-40 -left-40 w-60 h-60 bg-emerald-500/10 rounded-full animate-pulse-slow"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-full animate-pulse-slow"></div>
+        </div>
+        
+        <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                    Muhammad Sohaib
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-4 animate-slide-up">
+                    Final Year BS Computer Science Student | Class Topper | Aspiring Software Engineer
+                </h2>
+                <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto animate-slide-up">
+                    Exploring the intersection of AI, Blockchain, and Distributed Systems.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up">
+                    <button class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <i class="fas fa-download mr-2"></i>
+                        Download CV
+                    </button>
+                    <button class="px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">About Me</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <!-- Profile picture placeholder with modern styling -->
+                    <div class="w-80 h-80 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white text-6xl font-bold shadow-2xl">
+                        MS
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                        I'm Muhammad Sohaib, a computer science student passionate about building impactful solutions. Currently working on my Final Year Project on <strong class="text-blue-600 dark:text-blue-400">Student Degree Verification using Blockchain</strong>.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">Technical Skills</h3>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-cuttlefish text-blue-600 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">C++</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-python text-yellow-500 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">Python</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-java text-red-600 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">Java</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-js-square text-yellow-400 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">JavaScript</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-react text-cyan-500 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">React/Next.js</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-cube text-blue-500 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">Blockchain</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fas fa-brain text-purple-600 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">Machine Learning</span>
+                            </div>
+                            <div class="skill-badge bg-white dark:bg-slate-700 p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                <i class="fab fa-css3-alt text-blue-600 text-2xl mb-2 block"></i>
+                                <span class="font-semibold">TailwindCSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                    A showcase of my technical expertise and problem-solving abilities
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1: Blockchain FYP -->
+                <div class="project-card bg-gray-50 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <!-- Modern abstract blockchain visualization -->
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-link text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Student Degree Verification using Blockchain</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Final Year Project implementing a decentralized system for academic credential verification using blockchain technology, ensuring tamper-proof degree authentication.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">Blockchain</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">Solidity</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Web3</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: ML Sentiment Analysis -->
+                <div class="project-card bg-gray-50 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <!-- Stock market chart visualization -->
+                    <div class="h-48 bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Stock Market Sentiment Analysis</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Machine learning application that analyzes market sentiment from news articles and social media to predict stock price movements with high accuracy.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-red-100 dark:bg-red-900 text-red-800 dark:text-red-200 rounded-full text-sm">TensorFlow</span>
+                            <span class="px-3 py-1 bg-purple-100 dark:bg-purple-900 text-purple-800 dark:text-purple-200 rounded-full text-sm">NLP</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Medical Image Processing -->
+                <div class="project-card bg-gray-50 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <!-- Medical/X-ray visualization -->
+                    <div class="h-48 bg-gradient-to-br from-red-500 to-pink-600 flex items-center justify-center">
+                        <i class="fas fa-x-ray text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Fracture Detection in X-ray Images</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Computer vision system using deep learning to automatically detect bone fractures in X-ray images, assisting medical professionals in diagnosis.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">OpenCV</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">Deep Learning</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">Medical AI</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4: Database System -->
+                <div class="project-card bg-gray-50 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    <!-- Transport/database visualization -->
+                    <div class="h-48 bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-bus text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Transport Management System</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-4">
+                            Comprehensive database system for managing public transportation including route optimization, scheduling, and real-time tracking capabilities.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">MySQL</span>
+                            <span class="px-3 py-1 bg-green-100 dark:bg-green-900 text-green-800 dark:text-green-200 rounded-full text-sm">PHP</span>
+                            <span class="px-3 py-1 bg-orange-100 dark:bg-orange-900 text-orange-800 dark:text-orange-200 rounded-full text-sm">Database Design</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fab fa-github mr-2"></i>GitHub
+                            </a>
+                            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">
+                                <i class="fas fa-external-link-alt mr-2"></i>Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-20 bg-gray-50 dark:bg-slate-800">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Experience & Education</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Education -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-graduation-cap text-blue-600 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-bold">Education</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-blue-600 pl-6">
+                            <h4 class="text-xl font-semibold mb-2">BS Computer Science</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-2">In Progress</p>
+                            <div class="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                                <p class="font-semibold text-blue-800 dark:text-blue-200">CGPA: 3.94/4.0</p>
+                                <p class="text-sm text-blue-600 dark:text-blue-400">Highest Academic Achiever</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-gray-50 dark:bg-slate-800 p-6 rounded-lg">
+                            <h5 class="font-semibold mb-3 text-gray-900 dark:text-white">Key Courses</h5>
+                            <div class="grid grid-cols-1 gap-2 text-sm">
+                                <span class="text-gray-700 dark:text-gray-300">• Design and Analysis of Algorithms</span>
+                                <span class="text-gray-700 dark:text-gray-300">• Theory of Automata</span>
+                                <span class="text-gray-700 dark:text-gray-300">• Parallel & Distributed Computing</span>
+                                <span class="text-gray-700 dark:text-gray-300">• Machine Learning</span>
+                                <span class="text-gray-700 dark:text-gray-300">• Digital Image Processing</span>
+                                <span class="text-gray-700 dark:text-gray-300">• Information Security</span>
+                                <span class="text-gray-700 dark:text-gray-300">• Compiler Construction</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience -->
+                <div class="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <i class="fas fa-briefcase text-emerald-600 text-3xl mr-4"></i>
+                        <h3 class="text-2xl font-bold">Experience</h3>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-emerald-600 pl-6">
+                            <h4 class="text-xl font-semibold mb-2">Research & Development</h4>
+                            <p class="text-gray-600 dark:text-gray-400 mb-4">Academic Projects & Research</p>
+                            <ul class="space-y-2 text-gray-700 dark:text-gray-300">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-600 mt-1 mr-3"></i>
+                                    <span>Led blockchain-based document verification research project</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-600 mt-1 mr-3"></i>
+                                    <span>Developed AI-driven applications for medical image analysis</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-600 mt-1 mr-3"></i>
+                                    <span>Contributed to distributed computing research initiatives</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-emerald-600 mt-1 mr-3"></i>
+                                    <span>Published research on sentiment analysis in financial markets</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-emerald-50 dark:bg-emerald-900/30 p-6 rounded-lg">
+                            <h5 class="font-semibold mb-3 text-emerald-800 dark:text-emerald-200">Areas of Focus</h5>
+                            <div class="grid grid-cols-1 gap-2 text-sm">
+                                <span class="text-emerald-700 dark:text-emerald-300">• Blockchain-based Document Verification</span>
+                                <span class="text-emerald-700 dark:text-emerald-300">• Distributed Computing Systems</span>
+                                <span class="text-emerald-700 dark:text-emerald-300">• AI-driven Applications</span>
+                                <span class="text-emerald-700 dark:text-emerald-300">• Machine Learning Research</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white dark:bg-slate-900">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+                <p class="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Let's discuss opportunities, collaborations, or just have a conversation about technology
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div class="bg-gray-50 dark:bg-slate-800 p-8 rounded-xl shadow-lg">
+                    <form class="space-y-6" data-implementation="Contact form with validation">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required 
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white transition-colors" 
+                                placeholder="Enter your full name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required 
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white transition-colors" 
+                                placeholder="Enter your email address">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-slate-700 text-gray-900 dark:text-white transition-colors resize-none" 
+                                placeholder="Tell me about your project or just say hi!"></textarea>
+                        </div>
+                        <button type="submit" 
+                            class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="space-y-8">
+                    <div class="text-center">
+                        <h3 class="text-2xl font-bold mb-6">Connect With Me</h3>
+                        <p class="text-gray-600 dark:text-gray-400 mb-8">
+                            Feel free to reach out through any of these platforms
+                        </p>
+                    </div>
+                    
+                    <div class="grid gap-6">
+                        <a href="mailto:muhammad.sohaib@example.com" 
+                            class="flex items-center p-6 bg-gray-50 dark:bg-slate-800 rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors group">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">Email</h4>
+                                <p class="text-gray-600 dark:text-gray-400">muhammad.sohaib@example.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/muhammad-sohaib" target="_blank" 
+                            class="flex items-center p-6 bg-gray-50 dark:bg-slate-800 rounded-xl hover:bg-gray-800 dark:hover:bg-gray-700 transition-colors group">
+                            <div class="w-12 h-12 bg-gray-800 dark:bg-gray-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fab fa-github text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">GitHub</h4>
+                                <p class="text-gray-600 dark:text-gray-400">@muhammad-sohaib</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://linkedin.com/in/muhammad-sohaib" target="_blank" 
+                            class="flex items-center p-6 bg-gray-50 dark:bg-slate-800 rounded-xl hover:bg-blue-700 dark:hover:bg-blue-800 transition-colors group">
+                            <div class="w-12 h-12 bg-blue-700 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                                <i class="fab fa-linkedin text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 dark:text-white">LinkedIn</h4>
+                                <p class="text-gray-600 dark:text-gray-400">Muhammad Sohaib</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 dark:bg-slate-950 text-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-4">Muhammad Sohaib</h3>
+                <p class="text-gray-400 mb-6">Building the future with code, one project at a time.</p>
+                
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:muhammad.sohaib@example.com" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                    <a href="https://github.com/muhammad-sohaib" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/muhammad-sohaib" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                </div>
+                
+                <div class="border-t border-gray-800 pt-6">
+                    <p class="text-gray-400">&copy; 2025 Muhammad Sohaib. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle Functionality
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            if (currentTheme === 'dark') {
+                html.classList.add('dark');
+            }
+            
+            themeToggle.addEventListener('click', function() {
+                html.classList.toggle('dark');
+                
+                const theme = html.classList.contains('dark') ? 'dark' : 'light';
+                localStorage.setItem('theme', theme);
+            });
+        })();
+
+        // Smooth scrolling for navigation links
+        (function() {
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80; // Account for fixed header
+                        
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        })();
+
+        // Contact Form Submission (placeholder)
+        (function() {
+            const contactForm = document.querySelector('form');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // TODO: Implement actual form submission logic
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                
+                // Reset form
+                this.reset();
+            });
+        })();
+
+        // Intersection Observer for animations
+        (function() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            const animatedElements = document.querySelectorAll('.project-card, .skill-badge');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        })();
+    </script>
+</body>
+</html>
