@@ -42,8 +42,8 @@ export function ProjectsSection() {
       gradient: "from-green-500 to-emerald-600",
       tags: [
         { name: "Python", color: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200" },
-        { name: "TensorFlow", color: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200" },
         { name: "NLP", color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" },
+        { name: "Scikit-learn", color: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200" },
       ],
       github: "https://github.com/iamsohaib52/stock-market-sentiment-analysis",
       demo: "https://huggingface.co/spaces/sohaib52/stock_sentiment_analysis",
