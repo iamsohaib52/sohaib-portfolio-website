@@ -138,9 +138,16 @@ export function HeroSection() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="text-gray-400"
+            className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 cursor-pointer"
+            onClick={() => {
+              const aboutSection = document.getElementById("about");
+              aboutSection?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
-            <ArrowDown className="h-6 w-6" />
+            <div className="flex flex-col items-center">
+              <span className="text-sm mb-2 font-medium">Scroll to explore</span>
+              <ArrowDown className="h-6 w-6" />
+            </div>
           </motion.div>
         </motion.div>
       </div>

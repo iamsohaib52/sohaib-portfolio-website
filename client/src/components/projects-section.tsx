@@ -4,8 +4,20 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink, Link, TrendingUp, Scan, Bus } from "lucide-react";
 
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  icon: any;
+  gradient: string;
+  tags: Array<{ name: string; color: string }>;
+  github: string;
+  demo?: string;
+  hasDemo?: boolean;
+}
+
 export function ProjectsSection() {
-  const projects = [
+  const projects: Project[] = [
     {
       id: "blockchain-fyp",
       title: "Student Degree Verification using Blockchain",
@@ -18,6 +30,8 @@ export function ProjectsSection() {
         { name: "Solidity", color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" },
         { name: "Web3", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" },
       ],
+      github: "https://github.com/iamsohaib52/student-degree-verification-using-blockchain",
+      demo: "https://student-degree-verification-using-b.vercel.app/",
     },
     {
       id: "sentiment-analysis",
@@ -31,6 +45,8 @@ export function ProjectsSection() {
         { name: "TensorFlow", color: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200" },
         { name: "NLP", color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" },
       ],
+      github: "https://github.com/iamsohaib52/stock-market-sentiment-analysis",
+      demo: "https://huggingface.co/spaces/sohaib52/stock_sentiment_analysis",
     },
     {
       id: "fracture-detection",
@@ -44,6 +60,8 @@ export function ProjectsSection() {
         { name: "Deep Learning", color: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200" },
         { name: "Medical AI", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" },
       ],
+      github: "#",
+      hasDemo: false,
     },
     {
       id: "transport-system",
@@ -57,6 +75,8 @@ export function ProjectsSection() {
         { name: "PHP", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" },
         { name: "Database Design", color: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200" },
       ],
+      github: "https://github.com/iamsohaib52/Transport-Management-System",
+      hasDemo: false,
     },
   ];
 
@@ -148,19 +168,23 @@ export function ProjectsSection() {
                         size="sm"
                         className="text-blue-600 dark:text-blue-400 hover:underline p-0"
                         data-testid={`project-github-${project.id}`}
+                        onClick={() => window.open(project.github, '_blank')}
                       >
                         <Github className="mr-2 h-4 w-4" />
                         GitHub
                       </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        className="text-blue-600 dark:text-blue-400 hover:underline p-0"
-                        data-testid={`project-demo-${project.id}`}
-                      >
-                        <ExternalLink className="mr-2 h-4 w-4" />
-                        Demo
-                      </Button>
+                      {project.hasDemo !== false && (
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          className="text-blue-600 dark:text-blue-400 hover:underline p-0"
+                          data-testid={`project-demo-${project.id}`}
+                          onClick={() => window.open(project.demo, '_blank')}
+                        >
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          Demo
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

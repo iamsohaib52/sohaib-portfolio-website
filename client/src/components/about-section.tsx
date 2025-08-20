@@ -8,7 +8,9 @@ export function AboutSection() {
     { name: "Java", icon: "☕", color: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200" },
     { name: "JavaScript", icon: "🟨", color: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200" },
     { name: "React/Next.js", icon: "⚛️", color: "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200" },
-    { name: "Blockchain", icon: "🔗", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" },
+    { name: "Smart Contracts", icon: "📄", color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" },
+    { name: "Solidity", icon: "🔷", color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200" },
+    { name: "Web3.js", icon: "🌐", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" },
     { name: "Machine Learning", icon: "🧠", color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" },
     { name: "TailwindCSS", icon: "🎨", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" },
   ];
@@ -87,7 +89,7 @@ export function AboutSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="grid grid-cols-2 md:grid-cols-3 gap-4"
+                className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4"
               >
                 {skills.map((skill, index) => (
                   <motion.div
