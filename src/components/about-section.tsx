@@ -10,7 +10,7 @@ export function AboutSection() {
     { name: "Smart Contracts", icon: "📄", color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200" },
     { name: "Solidity", icon: "🔷", color: "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200" },
     { name: "Web3.js", icon: "🌐", color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200" },
-    { name: "Tailwind CSS", icon: "🎨", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" },
+    { name: "Next.js", icon: "𝐍", color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200" },
   ];
 
   const containerVariants = {

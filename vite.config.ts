@@ -14,9 +14,17 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
   },
   server: {
     port: 3000,
     open: true
+  },
+  define: {
+    'process.env': {}
   }
 });

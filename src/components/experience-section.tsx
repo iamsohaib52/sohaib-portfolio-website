@@ -64,6 +64,9 @@ export function ExperienceSection() {
                     <h4 className="text-xl font-semibold mb-2" data-testid="education-degree">
                       BS Computer Science
                     </h4>
+                    <p className="text-gray-600 dark:text-gray-400 mb-1" data-testid="education-university">
+                      COMSATS University Islamabad, Vehari Campus
+                    </p>
                     <p className="text-gray-600 dark:text-gray-400 mb-2">
                       In Progress
                     </p>
